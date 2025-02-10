@@ -1,0 +1,61 @@
+.header {
+  width: 90%;
+  position: fixed;
+  z-index: 99;
+  top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.229);
+  border-radius: 15px;
+  background: #0000004d;
+  backdrop-filter: blur(10px);
+  padding: 5px 5px;
+}
+
+.nav a {
+  padding: 7px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.active {
+  border: 1px solid rgba(255, 255, 255, 0.116);
+  border-radius: 10px;
+  background: #9595954d;
+  backdrop-filter: blur(10px);
+  color: white;
+}
+
+@media screen and (max-width: 1000px) {
+  .header {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .nav {
+    width: 90%;
+  }
+
+  .nav a {
+    font-size: 0;
+    padding: 7px 11px 7px 15px;
+  }
+
+  .nav a svg {
+    font-size: 25px;
+  }
+
+  .header div {
+    display: none;
+  }
+}

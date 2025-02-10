@@ -1,0 +1,159 @@
+---
+title: "What is FastAPI? A Beginner's Guide with Examples"
+cover: "/covers/cover2.webp"
+date: "2025-01-23"
+tag: "Programming"
+---
+
+FastAPI is a modern, high-performance web framework for building APIs in Python. It leverages Python's type hints to provide a robust, fast, and developer-friendly experience. With features like automatic data validation, interactive documentation, and high-speed performance, FastAPI has gained immense popularity among developers.
+
+In this blog, we will cover:
+
+- What is FastAPI?
+- Why use FastAPI?
+- Setting up FastAPI
+- Example of a simple FastAPI application
+- Key features of FastAPI
+
+## What is FastAPI?
+
+FastAPI is an open-source Python web framework for building APIs. It is based on standard Python type hints and powered by Starlette for the web parts and Pydantic for data validation.
+
+### Highlights of FastAPI:
+
+- **Fast and Asynchronous**: Designed for high-performance, it is built on asynchronous programming capabilities using `async` and `await`.
+- **Automatic Validation**: Automatically validates request payloads using Python's type hints and Pydantic.
+- **Interactive Documentation**: Generates Swagger UI and ReDoc documentation automatically.
+- **Easy-to-use**: Simplifies API development with intuitive syntax.
+
+## Why Use FastAPI?
+
+Here are some reasons to consider FastAPI:
+
+1. **Performance**: Comparable to frameworks like Node.js and Go.
+2. **Developer Productivity**: Saves time with auto-generated documentation and easy request validation.
+3. **Standards-Based**: Built on OpenAPI and JSON Schema standards.
+4. **Scalable**: Suitable for projects of all sizes, from small apps to large-scale APIs.
+
+## Setting Up FastAPI
+
+Getting started with FastAPI is simple. Follow these steps:
+
+1. **Install FastAPI and Uvicorn**:
+
+```bash
+pip install fastapi uvicorn
+```
+
+2. **Create a Basic FastAPI App**:
+
+Create a file called `main.py`:
+
+```python
+from fastapi import FastAPI
+
+app = FastAPI()
+
+@app.get("/")
+def read_root():
+    return {"message": "Welcome to FastAPI!"}
+
+@app.get("/items/{item_id}")
+def read_item(item_id: int, q: str = None):
+    return {"item_id": item_id, "query": q}
+```
+
+3. **Run the Application**:
+
+Run the application using Uvicorn:
+
+```bash
+uvicorn main:app --reload
+```
+
+Open your browser and navigate to `http://127.0.0.1:8000` to see the result. You can also access the interactive API documentation at `http://127.0.0.1:8000/docs`.
+
+## Example of a Simple FastAPI Application
+
+Here’s an example of a FastAPI application that accepts user data and performs validation:
+
+```python
+from fastapi import FastAPI
+from pydantic import BaseModel
+
+app = FastAPI()
+
+class User(BaseModel):
+    name: str
+    age: int
+    email: str
+
+@app.post("/users/")
+def create_user(user: User):
+    return {"message": f"User {user.name} created successfully!", "user": user}
+```
+
+### Explanation:
+
+- **`BaseModel`**: Defines the data model for request validation.
+- **`@app.post`**: Declares a POST endpoint to handle user creation.
+- FastAPI automatically validates incoming requests and returns a helpful error if the data is invalid.
+
+Run the above code and test the `/users/` endpoint using tools like Postman or the Swagger UI.
+
+## Key Features of FastAPI
+
+1. **Automatic Documentation**:
+
+FastAPI generates OpenAPI-compliant documentation for your API automatically. Visit `/docs` (Swagger UI) or `/redoc` for interactive API documentation.
+
+2. **Data Validation**:
+
+It validates incoming requests and outgoing responses using Pydantic models. Example:
+
+```python
+from pydantic import BaseModel
+
+class Item(BaseModel):
+    name: str
+    price: float
+    is_offer: bool = None
+
+@app.put("/items/{item_id}")
+def update_item(item_id: int, item: Item):
+    return {"item_id": item_id, "item": item}
+```
+
+3. **Asynchronous Support**:
+
+FastAPI supports asynchronous programming, making it suitable for I/O-bound tasks:
+
+```python
+import asyncio
+
+@app.get("/async")
+async def async_endpoint():
+    await asyncio.sleep(2)
+    return {"message": "This endpoint supports async programming!"}
+```
+
+4. **Dependency Injection**:
+
+Define dependencies that can be reused across endpoints:
+
+```python
+from fastapi import Depends
+
+async def common_dependency():
+    return "This is a shared dependency."
+
+@app.get("/dependency")
+async def endpoint_with_dependency(dep=Depends(common_dependency)):
+    return {"dependency": dep}
+```
+
+## Conclusion
+
+FastAPI is a powerful and versatile framework for building APIs in Python. Its simplicity, speed, and out-of-the-box features make it a great choice for both beginners and experienced developers. With minimal setup, you can create robust, well-documented APIs in no time.
+
+Give FastAPI a try and see how it can simplify your API development process!

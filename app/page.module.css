@@ -1,0 +1,344 @@
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 100px;
+  margin-top: 190px;
+  width: 90%;
+}
+
+.hero a {
+  border: 1px solid rgba(255, 255, 255, 0.116);
+  border-radius: 40px;
+  background: #9595954d;
+  backdrop-filter: blur(10px);
+  padding: 6px 13px;
+  transition: 0.3s;
+  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.hero a:hover {
+  gap: 10px;
+}
+
+.hero img {
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-radius: 50%;
+}
+
+.hero h1 {
+  font-size: 40px;
+}
+
+.hero p {
+  font-size: 17px;
+  color: #d5d5d5;
+  line-height: 1.5;
+}
+
+.heroInfo {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  width: 40%;
+}
+
+.latestBlog {
+  margin-top: 170px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  width: 63%;
+}
+
+.latestBlog h2 {
+  font-size: 30px;
+}
+
+.blog {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 15px;
+  width: 100%;
+  transition: 0.3s;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  background: #0000004d;
+  backdrop-filter: blur(10px);
+  padding: 13px;
+}
+
+.blog img {
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.096);
+}
+
+.blogInfo {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.blogInfo a {
+  font-size: 26px;
+}
+
+.blog:hover {
+  transform: translatex(10px);
+}
+
+.blogTag {
+  border: 1px solid rgba(255, 255, 255, 0.116);
+  border-radius: 40px;
+  background: #9595954d;
+  backdrop-filter: blur(10px);
+  padding: 5px 13px;
+  font-size: 13px;
+}
+
+.projects {
+  margin-top: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.projects h2 {
+  font-size: 30px;
+}
+
+.projectList {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.project {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.116);
+  border-radius: 20px;
+  background: #0000002d;
+  backdrop-filter: blur(10px);
+  padding: 18px;
+  width: 63%;
+}
+
+.project a {
+  border: 1px solid rgba(255, 255, 255, 0.116);
+  border-radius: 40px;
+  background: #9595954d;
+  backdrop-filter: blur(10px);
+  padding: 5px 13px;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.project a:hover {
+  gap: 10px;
+}
+
+.projectInfo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.project h3 {
+  font-size: xx-large;
+}
+
+.swiper {
+  width: 100%;
+}
+
+.project img {
+  width: 100%;
+
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.subscribe {
+  text-align: center;
+  margin: 100px 0;
+  padding: 80px 20px;
+  width: 63%;
+  border: 1px solid rgba(255, 255, 255, 0.099);
+  backdrop-filter: blur(10px);
+  background-color: hsla(0, 0%, 0%, 1);
+  background-image: radial-gradient(
+      at 80% 0%,
+      hsla(189, 0%, 0%, 1) 0px,
+      transparent 50%
+    ),
+    radial-gradient(at 0% 20%, rgb(0, 31, 61) 0px, transparent 50%),
+    radial-gradient(at 80% 50%, rgb(32, 0, 51) 0px, transparent 50%),
+    radial-gradient(at 80% 100%, hsla(264, 100%, 12%, 1) 0px, transparent 50%);
+  background-size: 100%;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.subscribe h2 {
+  font-size: 38px;
+}
+
+.subscribe form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.subscribe form input {
+  border: 1px solid rgba(255, 255, 255, 0.099);
+  border-radius: 10px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.subscribe form input:active,
+.subscribe form input:focus {
+  border: 1px solid rgba(255, 255, 255, 0.099);
+  border-radius: 10px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.2);
+  outline: none;
+}
+
+.subscribe form button {
+  border: 1px solid rgba(255, 255, 255, 0.099);
+  border-radius: 10px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  cursor: pointer;
+}
+
+.subscribe form button:active,
+.subscribe form button:focus {
+  border: 1px solid rgba(255, 255, 255, 0.099);
+  border-radius: 10px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.2);
+  outline: none;
+}
+
+@media screen and (max-width: 1000px) {
+  .blogs {
+    width: 90%;
+    margin-bottom: 60px;
+  }
+
+  .blog {
+    padding: 20px;
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+    width: 90%;
+  }
+
+  .blog img {
+    width: 100%;
+  }
+
+  .blogInfo {
+    align-items: center;
+  }
+
+  .blog:hover {
+    transform: none;
+  }
+
+  .projects {
+    width: 90%;
+    margin-top: 130px;
+  }
+
+  .project {
+    width: 370px;
+  }
+
+  .project img {
+    width: 340px;
+  }
+
+  .projectList {
+    flex-direction: column;
+  }
+
+  .heroInfo {
+    align-items: center;
+  }
+
+  .heroInfo h1 {
+    font-size: 30px;
+  }
+
+  .subscribe {
+    width: 90%;
+  }
+
+  .latestBlog {
+    width: 90%;
+  }
+
+  .blog {
+    width: 100%;
+  }
+
+  .blog img {
+    height: 200px;
+  }
+
+  .hero p {
+    font-size: 17px;
+    color: #d5d5d5;
+    line-height: 1.5;
+    text-align: center;
+  }
+
+  .heroInfo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+  }
+}

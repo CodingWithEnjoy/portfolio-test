@@ -1,0 +1,31 @@
+[
+  {
+    "id": 1,
+    "title": "Project One",
+    "description": "This is the description of project one.",
+    "githubLink": "https://github.com/user/project-one",
+    "images": [
+      "1.jpg",
+      "2.jpg"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Project Two",
+    "description": "This is the description of project two.",
+    "githubLink": "https://github.com/user/project-two",
+    "images": [
+      "1.jpg"
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Project Three",
+    "description": "This is the description of project three.",
+    "githubLink": "https://github.com/user/project-three",
+    "images": [
+      "1.jpg",
+      "2.jpg"
+    ]
+  }
+]

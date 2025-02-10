@@ -1,0 +1,66 @@
+@font-face {
+  src: url("/font/font.woff2");
+  font-family: "font";
+}
+
+::-webkit-scrollbar {
+  background: rgba(0, 0, 0, 0.1);
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 2px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "font";
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-user-drag: none;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  background-color: hsla(0, 0%, 0%, 1);
+  background-image: radial-gradient(
+      at 80% 0%,
+      hsla(189, 0%, 0%, 1) 0px,
+      transparent 50%
+    ),
+    radial-gradient(at 0% 20%, hsla(240, 100%, 12%, 1) 0px, transparent 50%),
+    radial-gradient(at 80% 50%, hsla(340, 100%, 10%, 1) 0px, transparent 50%),
+    radial-gradient(at 80% 100%, hsla(264, 100%, 12%, 1) 0px, transparent 50%);
+  background-size: 200% 200%;
+  animation: backgroundAnimation 5s infinite ease-in-out;
+}
+
+@keyframes backgroundAnimation {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+a {
+  all: unset;
+  cursor: pointer;
+}
